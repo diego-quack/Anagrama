@@ -18,14 +18,17 @@ public class Teste {
 	
 	private static final int CODIGO_ASCII = 256;
 	
-	public static boolean anagrama(String palavraUm, String palavraDois) {
+	public static String anagrama(String palavraUm, String palavraDois) {
+		
+		String anagrama = "É um anagrama";
+		String naoAnagrama = "Não é um anagrama";
 		
 		int[] contador = new int[CODIGO_ASCII];
 		char[] caracterPalavraUm = palavraUm.toCharArray();
 		char[] caracterPalavraDois = palavraDois.toCharArray();
 		
 		if(caracterPalavraUm.length != caracterPalavraDois.length) {
-			return false;
+			return naoAnagrama;
 		}
 		
 		for(int i = 0; i < caracterPalavraUm.length; i++) {
@@ -35,10 +38,10 @@ public class Teste {
 		
 		for(int i = 0; i < contador.length; i++) {
 			if(contador[i] != 0) {
-				return false;
+				return naoAnagrama;
 			}
 		}
-		return true;
+		return anagrama;
 	}
 
 }
