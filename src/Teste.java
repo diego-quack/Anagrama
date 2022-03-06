@@ -1,8 +1,18 @@
+import java.util.Scanner;
 
 public class Teste {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Entre com a primeira palavra: ");
+		String palavraUm = input.next();
+		System.out.print("Entre com a segunda palavra: ");
+		String palavraDois = input.next();
+		System.out.println(anagrama(palavraUm, palavraDois));
+		
+		input.close();
 
 	}
 	
@@ -14,7 +24,7 @@ public class Teste {
 		char[] caracterPalavraUm = palavraUm.toCharArray();
 		char[] caracterPalavraDois = palavraDois.toCharArray();
 		
-		if(caracterPalavraUm != caracterPalavraDois) {
+		if(caracterPalavraUm.length != caracterPalavraDois.length) {
 			return false;
 		}
 		
