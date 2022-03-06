@@ -5,5 +5,9 @@ public class Teste {
 		// TODO Auto-generated method stub
 
 	}
+	
+	private static final int ASCII_CODES = 256;
+	
+	
 
 }
