@@ -24,8 +24,8 @@ public class Teste {
 		String naoAnagrama = "Não é um anagrama";
 		
 		int[] contador = new int[CODIGO_ASCII];
-		char[] caracterPalavraUm = palavraUm.toCharArray();
-		char[] caracterPalavraDois = palavraDois.toCharArray();
+		char[] caracterPalavraUm = palavraUm.replaceAll("\\s", "").toLowerCase().toCharArray();
+		char[] caracterPalavraDois = palavraDois.replaceAll("\\s", "").toLowerCase().toCharArray();
 		
 		if(caracterPalavraUm.length != caracterPalavraDois.length) {
 			return naoAnagrama;
